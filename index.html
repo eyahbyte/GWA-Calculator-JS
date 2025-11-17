@@ -13,16 +13,20 @@
   <body>
 
     <div class="calculator-card">
-      <h1>General Weighted Average (GWA) Calculator</h1>
-      
-      <div id="input-fields"></div>
-
-      <div class="controls">
+      <header class="card-header">
+        <h1>GWA Calculator</h1>
         <button id="mode-toggle">
           <i id="mode-icon" class ="fas fa-moon"></i>
         </button>
-        <button id="add-course-btn">➕Add Course</button>
+      </header>
+      
+      <div id="input-fields"></div>
+      <div class="controls">       
+        <button id="reset-btn">Reset</button>
+        <div class="right buttons">
+          <button id="add-subject-btn">➕Add Subject</button>
         <button id="calculate-btn">📊Calculate</button>
+        </div> 
       </div>
 
       <div id="result-area">

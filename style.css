@@ -6,13 +6,26 @@ body {
     min-height: 100vh;
 }
 
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.card-header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .calculator-card {
     background-color: white;
     padding: 30px;
     border: radius 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     width: 90%;
-    max-width: 500px;
+    max-width: 600px;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
 }
@@ -22,7 +35,6 @@ h1 {
     color: #333;
     font-size: 30px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
     padding-bottom: 15px;
 }
 
@@ -42,9 +54,9 @@ button{
 
 .controls{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-bottom: 20px;
-    gap: 8px;
+    margin-bottom: 20px;
 }
 
 .dark-mode {
@@ -68,49 +80,69 @@ button{
     border-bottom-color: #555;
 }
 
-.course-entry {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
+.subject-entry {
+    display: grid;
+    grid-template-columns: 1.5fr 1.25fr 1.25fr auto;
+    gap: 5px;
+    margin-bottom: 15px;
+    align-items: center;
 }
 
-.course-entry input {
-    width: 50%;
+.subject-entry input {
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: 8px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
 }
 
-.dark-mode .course-entry input {
+.dark-mode .subject-entry input {
     background-color: #4a596b;
     color: #ecf0f1;
     border: 1px solid #7f8c8d;
 }
 
-.course-entry input:focus {
+.subject-entry input:focus {
     border-color: #3498db;
     outline: none;
 }
   
-.dark-mode .course-entry input:focus {
+.dark-mode .subject-entry input:focus {
     border-color: #95a5a6;
 }
 
-#add-course-btn {
+#reset-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.dark-mode #reset-btn{
+    background-color: #c0392b;
+}
+
+#reset-btn:hover{
+    background-color: #c0392b;
+}
+
+.dark-mode #reset-btn:hover{
+    background-color: #a43026;
+}
+
+#add-subject-btn {
     background-color: #2ecc71;
     color: white;
 }
 
-.dark-mode #add-course-btn{
+.dark-mode #add-subject-btn{
     background-color: #27ae60;
 }
 
-#add-course-btn:hover {
+#add-subject-btn:hover {
     background-color: #27ae60;
 }
 
-.dark-mode #add-course-btn:hover{
+.dark-mode #add-subject-btn:hover{
     background-color: #2ecc71;
 }
 
@@ -162,27 +194,62 @@ button{
 }
 
 #mode-toggle {
-    background: #f1f1f1;
+    background: transparent;
     color: #333;
     font-size: 17px;
     padding: 8px 12px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border: 1px solid transparent;
+    transition: transform 0.6s ease-in-out, color 0.3s;
 }
 
 .dark-mode #mode-toggle {
-    background: #263747;
+    background: transparent;
     color: #f1f1f1;
+    transform: rotate(180deg);
 }
 
-#mode-toggle:hover{
-    background: #e0e0e0;
-}
-
-.dark-mode #mode-toggle:hover{
-    background: #334a5f;
-}
 
 #mode-icon {
     display: inline-block;
     width: 1.2em;  
     text-align: center;
+}
+
+.remove-subject-btn {
+    background-color: transparent;
+    border: none;
+    color: #e74c3c;
+    padding: 0;
+    margin-left: 5px;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+    border: 1px solid transparent;
+}
+
+.remove-subject-btn:hover {
+    color: #c0392b;
+}
+
+.dark-mode .remove-subject-btn {
+    color: #f1f1f1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.subject-label {
+    font-weight: bold;
+    color: #444;
+    padding-right: 5px;
+    margin: 0;
+}
+
+.dark-mode .subject-label {
+    color: #ccc;
 }
