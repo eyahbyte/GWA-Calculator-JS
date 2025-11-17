@@ -4,14 +4,17 @@ A simple, dynamic web application built to quickly calculate general weighted av
 ## Live Demo
 https://eyahbyte.github.io/GWA-Calculator-JS/
 
-## Features
-* Dynamic course input generation using JavaScript.
+## Key Features & Accessibility
+* Dynamic subject generation using JavaScript.
 * Accurate weighted average calculation logic.
+* Includes row deletion and a full reset function.
+* Subject name input added for accessibility and data context.
 * Dark Mode toggle funcitonality.
-* Clean, minimalist desigh.
+* Clean, stable layout using CSS Gridn and Flexbox.
+  
 
 ## Technologies Used
 * **HTML5**
 * **CSS3**
 * **JavaScript (Vanilla JS)**
-* **FontAwesome**
+* **Font Awesome** (for icons)
